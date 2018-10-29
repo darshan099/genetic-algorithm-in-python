@@ -32,7 +32,7 @@ def mutation(offspring):
     # Mutation changes a single gene in each offspring randomly.
     for idx in range(offspring.shape[0]):
         random_value = np.random.uniform(-10, 10, 1)
-        if((offspring[idx, 1] + random_value)>0):
+        if((offspring[idx, 1] + random_value)>0) and ((offspring[idx, 1] + random_value)<=100):
             offspring[idx, 1] = offspring[idx, 1] + random_value
     return offspring
 
